@@ -34,13 +34,21 @@ const Timeline: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center pt-10 bg-gray-900 min-h-screen text-white">
-      <h1 className="text-3xl font-bold mb-5">Timeline for: {topic}</h1>
-      <div className="w-full max-w-4xl px-4">
-        {sampleEvents.map(event => (
-          <div key={event.id} className="my-5 p-4 bg-gray-700 rounded-lg shadow-md">
-            <p className="text-xl font-bold">{event.time}</p>
-            <p>{event.description}</p>
+    <div className="h-screen w-screen bg-gray-900 min-h-screen text-white">
+      <h1 className="text-3xl font-bold text-center pt-10 mb-5">Timeline for: {topic}</h1>
+      <div className="timeline">
+        {sampleEvents.map((event, index) => (
+          <div key={event.id} className="relative mb-6 ml-6">
+            {index !== 0 && <div className="absolute h-full border-l border-gray-500 left-1.5 -top-10"></div>}
+            <div className="flex items-center">
+              <div className="bg-blue-600 rounded-full h-4 w-4"></div>
+              <div className="flex flex-col flex-grow ml-4">
+                <div className="text-sm font-semibold">{event.time}</div>
+                <div className="bg-gray-700 rounded-lg shadow-md p-4 mt-1">
+                  <p className="mb-1 text-sm leading-tight">{event.description}</p>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>

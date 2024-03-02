@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopicInput from './TopicInput'; // Make sure to create this component
 import Timeline from './Timeline';     // Make sure to create this component
+import 'flowbite';
 
 const App: React.FC = () => {
   return (
