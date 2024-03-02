@@ -7,7 +7,9 @@ from .main import get_timeline
 @csrf_exempt
 def process_input(request):
     if request.method == 'POST':
+        print('abc')
         subject = request.POST.get('subject', '')
+        print('subject:', subject)
         result = get_timeline(subject)
         return JsonResponse(result, safe=False)
     

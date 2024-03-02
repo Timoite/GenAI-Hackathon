@@ -34,8 +34,4 @@ def get_timeline(query):
 
 
 
-print(get_timeline("Banana"))
-
-
-
 
