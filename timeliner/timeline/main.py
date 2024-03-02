@@ -30,7 +30,7 @@ def get_timeline(query):
     prompt = prompt_template.format(query = query)
     result = chat_model.invoke(prompt)
 
-    return jsonify(result.content)
+    return (result.content)
 
 
 
