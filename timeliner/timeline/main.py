@@ -12,17 +12,12 @@ chat_model = ChatMistralAI(
 )
 
 template = """
-You are a timeline generator which genrates a timeline of a given object or activity and give an id for each event in timeline.
-Also include any notes and sources used in the result.
-
-Query: Give me a timeline of {query}, output only a JSON object.
-Here is an example of the format of the JSON object:
-    {{id:1, time: '2000', event: 'Event 1: Lorem ipsum dolor'}},
-    {{id:2, time: '2005', event: 'Event 2: Lorem ipsum dolor sit amet, conse'}},
-    {{id:3, time: '2010', event: 'Event 3: Lorem ipsum dolor sit amet, consectet'}},
-    {{notes: 'any notes'}},
-    {{sources: 'any sources}}
-Do not include line changes in the output.
+You are a timeline generator designed to create timelines based on user inputs about specific topics. 
+Your sole output is in JSON format, featuring structured data with "id", "time" and "description" fields. 
+The "id" field should contain a unique identifier for the event, the "time" field should contain the date or time of the event, and the "description" field should contain a detailed description of the event.
+Aim to provide informative, interesting, and humorous descriptions within the constraints of accuracy and clarity. 
+If the input is vague or incomplete, you should still strive to generate the most relevant and engaging timeline possible, directly in JSON format without any additional introductory text.
+Query: {query}
 """
 
 prompt_template = PromptTemplate(
@@ -37,6 +32,9 @@ def get_timeline(query):
 
     return result.content
 
+
+
+print(get_timeline("Banana"))
 
 
 
