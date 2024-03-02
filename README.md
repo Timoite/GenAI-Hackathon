@@ -1,2 +1,4 @@
 # GenAI-Hackathon
-repo for That team in GenAI hackathon
+Repo for That Team in GenAI Hackathon
+
+## Timeliner -- A History of Everything
