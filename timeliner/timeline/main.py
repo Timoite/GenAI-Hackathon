@@ -22,11 +22,14 @@ prompt_template = PromptTemplate(
     template=template
 )
 
-query = "history of computer"
+def get_timeline(query):
 
-prompt = prompt_template.format(query = query)
+    prompt = prompt_template.format(query = query)
+    result = chat_model.invoke(prompt)
 
-result = chat_model.invoke(prompt)
-print(result.content)
+    return result.content
+
+
+
 
 
