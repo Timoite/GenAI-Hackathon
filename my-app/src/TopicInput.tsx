@@ -15,7 +15,7 @@ const TopicInput: React.FC = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen w-screen bg-gray-900">
-      <img src={logo} alt="Logo" className="mb-4 w-32" /> {/* Adjust size as needed */}
+      <img src={logo} alt="Logo" className="mb-4 w-48" /> {/* Adjust size as needed */}
       <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto">
         <div className="flex items-center relative">
           <input
