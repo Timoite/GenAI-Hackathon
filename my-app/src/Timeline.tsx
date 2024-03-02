@@ -36,10 +36,10 @@ const Timeline: React.FC = () => {
   return (
     <div className="flex flex-col justify-start items-center h-screen w-screen bg-gray-900 text-white">
       <h1 className="text-3xl font-bold text-center pt-10 mb-5">Timeline for: {topic}</h1>
-      <div className="timeline">
+      <ol className="relative border-s border-red-500 dark:border-gray-700"> {/* Timeline */}
         {sampleEvents.map((event, index) => (
           <div key={event.id} className="relative mb-6 ml-6 ">
-            {index !== 0 && <div className="absolute h-full border-l border-gray-500 left-1.5 -top-10"></div>}
+            {index !== 0 && <div className="absolute h-screen border-l border-gray-500 left-1.5 -top-10"></div>}
             <div className="flex items-center">
               <div className="bg-blue-600 rounded-full h-4 w-4"></div> {/* Dot */}
               <div className="flex flex-col flex-grow ml-4">
@@ -57,7 +57,7 @@ const Timeline: React.FC = () => {
             </div>
           </div>
         ))}
-      </div>
+      </ol>
     </div>
   );
 };
