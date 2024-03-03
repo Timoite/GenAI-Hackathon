@@ -6,9 +6,10 @@ from langchain_mistralai.chat_models import ChatMistralAI
 
 # Configuring the Mistral model endpoint and API key
 chat_model = ChatMistralAI(
-    endpoint="https://timeliner-htpqj.eastus2.inference.ml.azure.com",
-    mistral_api_key="JhL6hzIuo2VBAauDdhr08n7hEY73G4NU",
-    max_tokens=2048
+    #endpoint="https://timeliner-htpqj.eastus2.inference.ml.azure.com",
+    #mistral_api_key="JhL6hzIuo2VBAauDdhr08n7hEY73G4NU",
+    mistral_api_key="urbAjuMHjWmaONdLnhUbcdI0M3b1WfkF",
+    #max_tokens=2048
 )
 
 template = """
