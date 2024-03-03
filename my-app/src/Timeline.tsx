@@ -19,9 +19,14 @@ const Timeline: React.FC = () => {
       try {
         const response = await axios.post('http://127.0.0.1:8000/process_user_input/', {
           topic: topic, // Send the topic in the request body
-        });
-        console.log(topic);
-        setEvents(response.data); // Axios automatically parses the JSON response
+        },{
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
+          });
+        console.log("Topic sent:", topic);
+        console.log("Events received:", response.data);
+        setEvents(response.data['timeline']); // Axios automatically parses the JSON response
       } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
       } finally {

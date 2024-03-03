@@ -8,6 +8,7 @@ from .main import get_timeline
 def process_input(request):
     if request.method == 'POST':
         topic = request.POST.get('topic', '')
+        print(topic)
         result = get_timeline(topic)
         return JsonResponse(result, safe=False)
     
