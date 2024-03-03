@@ -27,7 +27,7 @@ const Timeline: React.FC = () => {
         console.log("Topic sent:", topic);
         console.log("Events received:", response.data);
         console.log("Response data type:", typeof(response.data));
-        setEvents(response.data['timeline']); // Axios automatically parses the JSON response
+        setEvents(response.data); // Axios automatically parses the JSON response
       } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
       } finally {
@@ -56,7 +56,7 @@ const Timeline: React.FC = () => {
                 <div className="flex flex-col flex-grow ml-4">
                   <div className="text-lg font-semibold">{event.time}</div>
                   <a href="#" className="block max-w-sm p-6 mt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <p className="mb-1 text-sm leading-tight">{event.description}</p>
+                    <p className="mb-1 text-black text-sm leading-tight">{event.description}</p>
                   </a>
                   <a href="#" className="mt-3 inline-flex max-w-32 items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Read more
