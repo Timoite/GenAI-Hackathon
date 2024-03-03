@@ -18,8 +18,9 @@ const Timeline: React.FC = () => {
     const fetchEvents = async () => {
       try {
         const response = await axios.post('http://127.0.0.1:8000/process_user_input/', {
-          topic: topic, // Send the topic in the request body
+          topic: topic, // Send the subject in the request body
         });
+        console.log(topic);
         setEvents(response.data); // Axios automatically parses the JSON response
       } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
@@ -31,12 +32,12 @@ const Timeline: React.FC = () => {
     
 
     fetchEvents();
-  }, [topic]);// Dependency array includes topic to refetch when it changes
+  }, [subject]);// Dependency array includes subject to refetch when it changes
   
 
   return (
     <div className="flex flex-col justify-start items-center h-screen w-screen bg-gray-900 text-white">
-      <h1 className="text-3xl font-bold text-center pt-10 mb-5">Timeline for: {topic}</h1>
+      <h1 className="text-3xl font-bold text-center pt-10 mb-5">Timeline for: {subject}</h1>
       <div className="w-full max-w-4xl p-4">
         {loading ? (
           <div className="text-center animate-spin text-5xl">Loading...</div>
