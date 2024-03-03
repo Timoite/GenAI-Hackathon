@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start backend",
+            "type": "shell",
+            "command": "${workspaceFolder}/start_backend.sh",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Start frontend",
+            "type": "shell",
+            "command": "${workspaceFolder}/start_backend.sh",
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}

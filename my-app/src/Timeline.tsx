@@ -56,7 +56,7 @@ const Timeline: React.FC = () => {
                 <div className="flex flex-col flex-grow ml-4">
                   <div className="text-lg font-semibold">{event.time}</div>
                   <a href="#" className="block max-w-sm p-6 mt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <p className="mb-1 text-white text-sm leading-tight">{event.description}</p>
+                    <p className="mb-1 text-black text-warp text-base leading-tight">{event.description}</p>
                   </a>
                   <a href={`https://www.phind.com/search?q=tell_me_about_${encodeURIComponent(topic + ' ' + event.description)}`} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex max-w-32 items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Read more
