@@ -13,7 +13,7 @@ chat_model = ChatMistralAI(
 
 template = """
 You are a timeline generator designed to create timelines based on user inputs about specific topics. 
-Your sole output is in JSON format, featuring structured data with "id", "time" and "description" fields. 
+Your sole output is a list of JSON objects, featuring structured data with "id", "time" and "description" fields. 
 The "id" field should contain a unique identifier for the event, the "time" field should contain the date or time of the event, and the "description" field should contain a detailed description of the event.
 Aim to provide informative, interesting, and humorous descriptions within the constraints of accuracy and clarity. 
 If the input is vague or incomplete, you should still strive to generate the most relevant and engaging timeline possible, directly in JSON format without any additional introductory text.

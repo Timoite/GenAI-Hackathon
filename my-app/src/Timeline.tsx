@@ -26,6 +26,7 @@ const Timeline: React.FC = () => {
           });
         console.log("Topic sent:", topic);
         console.log("Events received:", response.data);
+        console.log("Response data type:", typeof(response.data));
         setEvents(response.data['timeline']); // Axios automatically parses the JSON response
       } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
