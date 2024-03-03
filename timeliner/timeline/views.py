@@ -7,10 +7,11 @@ from .main import get_timeline
 @csrf_exempt
 def process_input(request):
     if request.method == 'POST':
-        title = request.POST.get('title', '')
-        result = get_timeline(title)
-        
-        return JsonResponse({'processed_data': result})
+        print('abc')
+        subject = request.POST.get('subject', '')
+        print('subject:', subject)
+        result = get_timeline(subject)
+        return JsonResponse(result, safe=False)
     
     else:
         return JsonResponse({'error': 'Method not allowed'}, status=405)
