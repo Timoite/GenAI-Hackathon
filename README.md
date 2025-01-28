@@ -1,4 +1,4 @@
-# My React Timeline App
+# Timeliner
 
 This project is a timeline application where users can input a topic and view a chronological timeline related to that topic. It uses React for the frontend, with Vite as the build tool and TypeScript for type safety. TailwindCSS is used for styling, and Flowbite provides additional UI components.
 
